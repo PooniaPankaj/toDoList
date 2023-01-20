@@ -1,0 +1,206 @@
+body{
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* align-items: center; */
+    justify-content: center;
+}
+.to_do_app{
+    padding: 10px;
+    margin-top: 20px;
+    height: auto;
+    width: 70%;
+    position: relative;
+    /* border: 2px black solid; */
+    background-color: rgba(150, 141, 141, 0.107);
+    display: flex;
+    flex-direction: column;
+}
+#heading{
+    position: relative;
+    margin-top: 25px;
+   width: 100%;
+   height: 2rem;
+   font-size: 1.5rem;
+   color: gray;
+   text-align: center;
+   border-bottom: 1px gray solid;
+   display: block;
+
+}
+#description{
+    border: none;
+    border-bottom:1px gray solid;
+    opacity: 0.5;
+    background: transparent;
+    width: 100%;
+    margin-top: 0px;
+    height: 2.5rem;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+#text_first{
+    margin: 1px;
+    font-family: sans-serif;
+    color: rgb(105, 103, 103);
+    text-transform: uppercase;
+}
+#options{
+    background-color: white;
+
+}
+.more_information{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding: 3px;
+}
+.category{
+    width: 50%;
+}
+.dropdown{
+    position: relative;
+    /* border: 1px solid grey; */
+
+}
+.dropdown *{
+    box-sizing: border-box;
+}
+.select{
+    background-color: transparent;
+    padding: 5px;
+   color: gray;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid gray;
+    transition: 0.3s;
+}
+.caret-rotate{
+    transform: rotate(180deg);
+}
+.menu{
+    list-style: none;
+    padding: 0.2em 0em;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 1em;
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+.menu li{
+    color: gray;
+}
+.menu li:hover{
+    background-color: rgb(182, 61, 182);
+    color: white;
+    cursor: pointer;
+}
+.active{
+    background: rgba(116, 9, 116, 0.747);
+    color: white !important;
+}
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+.select-clicked{
+    box-shadow: 0 0 0.8em #26489a;
+}
+.category{
+    padding: 5px;
+    border-right: 1px solid gray;
+}
+#eventDate{
+    background: transparent;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+}
+#buttons{
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+}
+#buttons button{
+    border: none;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 128, 0, 0.793);
+    
+    color: white;
+}
+#buttons button:hover{
+    cursor: pointer;
+    background-color: green;
+}
+#buttons i{
+    padding-right: 5px;
+}
+#list_items{
+    margin: 0px;
+    border-top: 1px solid gray;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+#elements{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#description_content{
+    color: gray;
+    padding: 10px 0px;
+    font-family: sans-serif;
+}
+#type{
+    border: 1px solid gray;
+    width: 90px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: purple;
+    color: white;
+}
+#delete i{
+    padding: 8px;
+    background-color: white;
+    color: red;
+}
+#category *{
+    color: grey;
+}
+.select{
+    outline: none;
+}
+#category{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+.select option{
+    background-color: white;
+    font-family: sans-serif;
+    width: 100%;
+}
+#date{
+    color: gray;
+    font-size: small;
+}

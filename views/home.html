@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://kit.fontawesome.com/42e7750d45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/home.css">
+</head>
+<body>
+    <div class="to_do_app">
+        <div id="heading">
+            TO-DO App
+        </div>
+        <div>
+            <form>
+                <p id="text_first">Description</p>
+                <input type="text" name="description" id="description" placeholder="What do you need to do?">
+                <div class="more_information">
+                    <div class="category">
+                        <p id="text_first">CATEGORY</p>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="selected">Choose a category</span>
+                                    <div class="caret"></div>
+                                </div>
+                                <ul class="menu">
+                                    <li class="active">Choose a category</li>
+                                    <li>Personel</li>
+                                    <li>word</li>
+                                    <li>school</li>
+                                </ul>
+
+                            </div>
+                    </div>
+                    <input type="date" id="eventDate" name="eventDate">
+
+                </div>
+
+                <div id="buttons">
+                    
+                <button type="submit"><i class="fa-solid fa-plus"></i>ADD TASK</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- 3 inputs from the user
+        1 -> description of the event
+        2-> date
+        3-> category
+    -->
+    <div id="list-items">
+        <ul type="none">
+            <!-- <% for (let i of contact_list){%>
+                <li>
+                <div id="elements">
+                    <span id="name"><%= i.name%></span>
+                    <span id="phone"><%= i.MobileNumber%></span>
+                </div>
+                <div id="delete">
+                     this is string params 
+                    in query params we need to write
+                       ?phone =  <%= i.MobileNumber%>&name=<%= i.name%>
+                    we can add as many queries as we want in query params
+                    <a href="/delete-contact/<%= i._id%>">
+                    <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </div>
+                </li>
+            <%}%> -->
+
+        </ul>
+
+    </div>
+
+
+    <script src="../assets/home.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://kit.fontawesome.com/42e7750d45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <div class="to_do_app">
+        <div id="heading">
+            TO-DO App
+        </div>
+        <div>
+            <form method="post" action="/create_task">
+                <p id="text_first">Description</p>
+                <input type="text" name="description" id="description" required placeholder="What do you need to do?">
+                <div class="more_information">
+                    <div class="category">
+                        <p id="text_first">CATEGORY</p>
+                            <select name="type" id="category" required class="select">
+                                <option value="Choose a category">Choose a category</option>
+                                <option value="Personel">Personel</option>
+                                <option value="Work">Work</option>
+                                <option value="School">School</option>
+                            </select>
+                            <!-- <div class="dropdown">
+                                <div class="select">
+                                    <span class="selected">Choose a category</span>
+                                    <div class="caret"></div>
+                                </div>
+                                <ul class="menu">
+                                    <li class="active">Choose a category</li>
+                                    <li>Personel</li>
+                                    <li>Work</li>
+                                    <li>School</li>
+                                </ul>
+
+                            </div> -->
+                    </div>
+                    <p id="text_first">date</p>
+                    <input type="date" id="eventDate" name="date" required>
+
+                </div>
+
+                <div id="buttons">
+                    
+                <button type="submit"><i class="fa-solid fa-plus"></i>ADD TASK</button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+        <div id="list-items">
+            <ul type="none">
+                <% for (let i of tasks){%>
+                    <li >
+                        <div id="list_items">
+                            <div id="elements">
+                                <span id="description_content"><%= i.description%></span>
+        
+                                <span id="type"><%= i.type%></span>
+                            </div>
+                            <div id="delete">
+                                <a href="/delete-task/<%= i._id%>">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <span id="date"><%= i.date %></span>
+                    </li>
+                <%}%>
+    
+            </ul>
+    
+        </div>
+
+    </div>
+
+    <!-- 3 inputs from the user
+        1 -> description of the event
+        2-> date
+        3-> category
+    -->
+    
+
+
+    <script src="./home.js"></script>
+
+    
+</body>
+</html>
